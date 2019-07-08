@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d0004964225e44a99fbf9a01ad263e, type: 3}
+  m_Name: Expressions
+  m_EditorClassIdentifier: 
+  m_presets:
+  - name: Smile
+    m_blendShapes:
+    - name: Expressions_mouth02_max
+      weight: 0.5
+    blendMode: 0
+  - name: InnerBrowRaise
+    m_blendShapes: []
+    blendMode: 0
+  - name: BrowRaise
+    m_blendShapes: []
+    blendMode: 0
+  - name: BrowFurrow
+    m_blendShapes: []
+    blendMode: 0
+  - name: NoseWrinkle
+    m_blendShapes: []
+    blendMode: 0
+  - name: UpperLipRaise
+    m_blendShapes: []
+    blendMode: 0
+  - name: LipCornerDepressor
+    m_blendShapes: []
+    blendMode: 0
+  - name: ChinRaise
+    m_blendShapes: []
+    blendMode: 0
+  - name: LipPucker
+    m_blendShapes: []
+    blendMode: 0
+  - name: LipPress
+    m_blendShapes: []
+    blendMode: 0
+  - name: LipSuck
+    m_blendShapes: []
+    blendMode: 0
+  - name: MouthOpen
+    m_blendShapes:
+    - name: Expressions_mouth10_max
+      weight: 1
+    blendMode: 0
+  - name: Smirk
+    m_blendShapes: []
+    blendMode: 0
+  - name: EyeClosure
+    m_blendShapes:
+    - name: Expressions_eye02L_max
+      weight: 1
+    - name: Expressions_eye02R_max
+      weight: 1
+    blendMode: 0
+  - name: Attention
+    m_blendShapes: []
+    blendMode: 0
+  - name: Blink
+    m_blendShapes:
+    - name: Expressions_eye02L_max
+      weight: 1
+    - name: Expressions_eye02R_max
+      weight: 1
+    blendMode: 0
+  - name: Eyes_U
+    m_blendShapes:
+    - name: Expressions_eye04_max
+      weight: 1
+    blendMode: 0
+  - name: Eyes_D
+    m_blendShapes:
+    - name: Expressions_eye04_min
+      weight: 1
+    blendMode: 0
+  - name: Eyes_R
+    m_blendShapes:
+    - name: Expressions_eye03_max
+      weight: 1
+    blendMode: 0
+  - name: Eyes_L
+    m_blendShapes:
+    - name: Expressions_eye03_min
+      weight: 1
+    blendMode: 0

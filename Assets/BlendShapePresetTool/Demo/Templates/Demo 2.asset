@@ -1,0 +1,239 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d0004964225e44a99fbf9a01ad263e, type: 3}
+  m_Name: Demo 2
+  m_EditorClassIdentifier: 
+  m_presets:
+  - name: Smile
+    m_blendShapes:
+    - name: Expressions_brow03L_max
+      weight: 0.5
+    - name: Expressions_brow03R_max
+      weight: 0.287
+    - name: Expressions_eye01L_max
+      weight: 0.074
+    - name: Expressions_eye01R_max
+      weight: 0.069
+    - name: Expressions_mouth03_max
+      weight: 0.737
+    blendMode: 0
+  - name: Laugth
+    m_blendShapes:
+    - name: Expressions_brow01_max
+      weight: 0.712
+    - name: Expressions_brow01_min
+      weight: 0.287
+    - name: Expressions_brow02L_max
+      weight: 0.613
+    - name: Expressions_brow03R_max
+      weight: 0.841
+    - name: Expressions_cheek01R_max
+      weight: 0.06
+    - name: Expressions_cheek02L_max
+      weight: 0.233
+    - name: Expressions_cheek02R_max
+      weight: 0.218
+    - name: Expressions_mouth02_max
+      weight: 0.939
+    - name: Expressions_mouth03_max
+      weight: 0.316
+    - name: Expressions_mouth03_min
+      weight: 0.05
+    - name: Expressions_mouth04_max
+      weight: 0.655
+    - name: Expressions_mouth04_min
+      weight: 0.242
+    - name: Expressions_mouth05_max
+      weight: 0.05
+    - name: Expressions_mouth05_min
+      weight: 0.023
+    - name: Expressions_mouth12_min
+      weight: 0.82
+    - name: Expressions_brow03L_max
+      weight: 1
+    blendMode: 0
+  - name: Angry
+    m_blendShapes:
+    - name: Expressions_mouth02_min
+      weight: 0.43
+    - name: Expressions_mouth05_min
+      weight: 0.89
+    - name: Expressions_mouth07_max
+      weight: 0.61
+    - name: Expressions_mouth08_max
+      weight: 0
+    - name: Expressions_mouth09_max
+      weight: 0
+    - name: Expressions_mouth10_min
+      weight: 0.16
+    - name: Expressions_mouth11_min
+      weight: 0
+    - name: Expressions_brow01_min
+      weight: 1
+    - name: Expressions_mouth09_min
+      weight: 0
+    - name: Expressions_mouth11_max
+      weight: 0
+    - name: Expressions_mouth12_max
+      weight: 0
+    blendMode: 0
+  - name: Sad
+    m_blendShapes:
+    - name: Expressions_brow01_max
+      weight: 0.433
+    - name: Expressions_brow02L_max
+      weight: 0.412
+    - name: Expressions_brow02R_max
+      weight: 0.84
+    - name: Expressions_cheek01L_max
+      weight: 0.82
+    - name: Expressions_cheek01R_max
+      weight: 0.985
+    - name: Expressions_eye01R_max
+      weight: 0.39
+    - name: Expressions_mouth01_min
+      weight: 0.02
+    - name: Expressions_mouth02_min
+      weight: 0.28
+    - name: Expressions_mouth04_min
+      weight: 0.64
+    - name: Expressions_mouth07_min
+      weight: 0.27
+    - name: Expressions_mouth09_max
+      weight: 0.22
+    - name: Expressions_mouth12_min
+      weight: 0.26
+    - name: Expressions_mouth08_min
+      weight: 0.7
+    - name: Expressions_mouth07_max
+      weight: 0.01
+    - name: Expressions_mouth11_min
+      weight: 0.42
+    - name: Expressions_eye02R_max
+      weight: 0.08
+    - name: Expressions_eye02R_min
+      weight: 0.18
+    - name: Expressions_eye02L_max
+      weight: 0.15
+    blendMode: 0
+  - name: Surprised
+    m_blendShapes:
+    - name: Expressions_brow01_max
+      weight: 0.893
+    - name: Expressions_eye02L_min
+      weight: 0.64
+    - name: Expressions_eye02R_min
+      weight: 0.97
+    - name: Expressions_mouth10_min
+      weight: 0.5
+    - name: Expressions_mouth09_max
+      weight: 0.55
+    - name: Expressions_mouth12_min
+      weight: 0.63
+    - name: Expressions_mouth07_min
+      weight: 0.47
+    - name: Expressions_mouth09_min
+      weight: 0.05
+    - name: Expressions_mouth03_min
+      weight: 0.33
+    - name: Expressions_brow01_min
+      weight: 1
+    - name: Expressions_brow02L_max
+      weight: 0.44
+    - name: Expressions_brow03L_max
+      weight: 1
+    - name: Expressions_brow03R_max
+      weight: 0.4
+    - name: Expressions_cheek01R_max
+      weight: 0.24
+    - name: Expressions_cheek02L_max
+      weight: 0.46
+    blendMode: 0
+  - name: Scream
+    m_blendShapes:
+    - name: Expressions_brow01_min
+      weight: 0.279
+    - name: Expressions_brow02L_max
+      weight: 0.446
+    - name: Expressions_brow02R_max
+      weight: 0.344
+    - name: Expressions_brow03L_max
+      weight: 0.498
+    - name: Expressions_brow03R_max
+      weight: 0.363
+    - name: Expressions_eye02L_max
+      weight: 0.125
+    - name: Expressions_eye02R_max
+      weight: 0.134
+    - name: Expressions_eye02R_min
+      weight: 0.134
+    - name: Expressions_mouth07_min
+      weight: 0
+    - name: Expressions_mouth10_max
+      weight: 0.71
+    - name: Expressions_mouth09_min
+      weight: 0.06
+    - name: Expressions_mouth05_min
+      weight: 0
+    - name: Expressions_mouth06_max
+      weight: 0.43
+    - name: Expressions_mouth06_min
+      weight: 0
+    - name: Expressions_mouth07_max
+      weight: 0.85
+    - name: Expressions_mouth10_min
+      weight: 0.23
+    - name: Expressions_mouth11_max
+      weight: 0
+    - name: Expressions_mouth11_min
+      weight: 0
+    - name: Expressions_mouth12_max
+      weight: 0.55
+    - name: Expressions_brow01_max
+      weight: 1
+    - name: Expressions_cheek01L_max
+      weight: 0.26
+    - name: Expressions_cheek01R_max
+      weight: 0.14
+    - name: Expressions_cheek02R_max
+      weight: 0.24
+    blendMode: 0
+  - name: Eyes_U
+    m_blendShapes:
+    - name: Expressions_eye04_max
+      weight: 1
+    blendMode: 3
+  - name: Eyes_D
+    m_blendShapes:
+    - name: Expressions_eye04_min
+      weight: 1
+    blendMode: 3
+  - name: Eyes_R
+    m_blendShapes:
+    - name: Expressions_eye03_max
+      weight: 1
+    blendMode: 3
+  - name: Eyes_L
+    m_blendShapes:
+    - name: Expressions_eye03_min
+      weight: 1
+    blendMode: 3
+  - name: Blink
+    m_blendShapes:
+    - name: Expressions_eye01R_max
+      weight: 1
+    - name: Expressions_eye01L_max
+      weight: 1
+    - name: Expressions_eye02L_max
+      weight: 0
+    - name: Expressions_eye02L_min
+      weight: 0
+    blendMode: 1

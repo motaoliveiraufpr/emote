@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+Assets/Affdex/Plugins/iOS/libaffdex-native.a filter=lfs diff=lfs merge=lfs -text
+Assets/itseez3d/avatar_sdk/sdk_offline/Plugins/iOS/AvatarSDK.framework/AvatarSDK filter=lfs diff=lfs merge=lfs -text

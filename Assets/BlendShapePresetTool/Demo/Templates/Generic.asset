@@ -1,0 +1,322 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d0004964225e44a99fbf9a01ad263e, type: 3}
+  m_Name: Generic
+  m_EditorClassIdentifier: 
+  m_presets:
+  - name: Smile
+    m_blendShapes:
+    - name: MouthSmile_L
+      weight: 0.9
+    - name: MouthSmile_R
+      weight: 0.9
+    blendMode: 0
+  - name: InnerBrowRaise
+    m_blendShapes: []
+    blendMode: 0
+  - name: BrowRaise
+    m_blendShapes: []
+    blendMode: 0
+  - name: BrowFurrow
+    m_blendShapes: []
+    blendMode: 0
+  - name: NoseWrinkle
+    m_blendShapes: []
+    blendMode: 0
+  - name: UpperLipRaise
+    m_blendShapes: []
+    blendMode: 0
+  - name: LipCornerDepressor
+    m_blendShapes: []
+    blendMode: 0
+  - name: ChinRaise
+    m_blendShapes: []
+    blendMode: 0
+  - name: LipPucker
+    m_blendShapes: []
+    blendMode: 0
+  - name: LipPress
+    m_blendShapes: []
+    blendMode: 0
+  - name: LipSuck
+    m_blendShapes: []
+    blendMode: 0
+  - name: MouthOpen
+    m_blendShapes:
+    - name: JawOpen
+      weight: 0.5
+    blendMode: 0
+  - name: Smirk
+    m_blendShapes: []
+    blendMode: 0
+  - name: EyeClosure
+    m_blendShapes:
+    - name: EyeBlink_L
+      weight: 1
+    - name: EyeBlink_R
+      weight: 1
+    blendMode: 0
+  - name: Attention
+    m_blendShapes: []
+    blendMode: 0
+  - name: Blink
+    m_blendShapes:
+    - name: EyeBlink_L
+      weight: 1
+    - name: EyeBlink_R
+      weight: 1
+    blendMode: 0
+  - name: Eyes_U
+    m_blendShapes:
+    - name: EyesUp
+      weight: 1
+    blendMode: 0
+  - name: Eyes_D
+    m_blendShapes:
+    - name: EyesDown
+      weight: 1
+    blendMode: 0
+  - name: Eyes_R
+    m_blendShapes:
+    - name: EyesRight
+      weight: 1
+    blendMode: 0
+  - name: Eyes_L
+    m_blendShapes:
+    - name: EyesLeft
+      weight: 1
+    blendMode: 0
+  - name: BrowsD_L
+    m_blendShapes:
+    - name: BrowsD_L
+      weight: 1
+    blendMode: 0
+  - name: BrowsD_R
+    m_blendShapes:
+    - name: BrowsD_R
+      weight: 1
+    blendMode: 0
+  - name: BrowsU_C
+    m_blendShapes:
+    - name: BrowsU_C
+      weight: 1
+    blendMode: 0
+  - name: BrowsU_L
+    m_blendShapes:
+    - name: BrowsU_L
+      weight: 1
+    blendMode: 0
+  - name: BrowsU_R
+    m_blendShapes:
+    - name: BrowsU_R
+      weight: 1
+    blendMode: 0
+  - name: CheekSquint_L
+    m_blendShapes:
+    - name: CheekSquint_L
+      weight: 1
+    blendMode: 0
+  - name: CheekSquint_R
+    m_blendShapes:
+    - name: CheekSquint_R
+      weight: 1
+    blendMode: 0
+  - name: ChinLowerRaise
+    m_blendShapes:
+    - name: ChinLowerRaise
+      weight: 1
+    blendMode: 0
+  - name: ChinUpperRaise
+    m_blendShapes:
+    - name: ChinUpperRaise
+      weight: 1
+    blendMode: 0
+  - name: EyeBlink_L
+    m_blendShapes:
+    - name: EyeBlink_L
+      weight: 1
+    blendMode: 0
+  - name: EyeBlink_R
+    m_blendShapes:
+    - name: EyeBlink_R
+      weight: 1
+    blendMode: 0
+  - name: EyeOpen_L
+    m_blendShapes:
+    - name: EyeOpen_L
+      weight: 1
+    blendMode: 0
+  - name: EyeOpen_R
+    m_blendShapes:
+    - name: EyeOpen_R
+      weight: 1
+    blendMode: 0
+  - name: EyeSquint_L
+    m_blendShapes:
+    - name: EyeSquint_L
+      weight: 1
+    blendMode: 0
+  - name: EyeSquint_R
+    m_blendShapes:
+    - name: EyeSquint_R
+      weight: 1
+    blendMode: 0
+  - name: EyesDown
+    m_blendShapes:
+    - name: EyesDown
+      weight: 1
+    blendMode: 0
+  - name: EyesLeft
+    m_blendShapes:
+    - name: EyesLeft
+      weight: 1
+    blendMode: 0
+  - name: EyesRight
+    m_blendShapes:
+    - name: EyesRight
+      weight: 1
+    blendMode: 0
+  - name: EyesUp
+    m_blendShapes:
+    - name: EyesUp
+      weight: 1
+    blendMode: 0
+  - name: JawChew
+    m_blendShapes:
+    - name: JawChew
+      weight: 1
+    blendMode: 0
+  - name: JawFwd
+    m_blendShapes:
+    - name: JawFwd
+      weight: 1
+    blendMode: 0
+  - name: JawLeft
+    m_blendShapes:
+    - name: JawLeft
+      weight: 1
+    blendMode: 0
+  - name: JawOpen
+    m_blendShapes:
+    - name: JawOpen
+      weight: 1
+    blendMode: 0
+  - name: JawRight
+    m_blendShapes:
+    - name: JawRight
+      weight: 1
+    blendMode: 0
+  - name: LipsFunnel
+    m_blendShapes:
+    - name: LipsFunnel
+      weight: 1
+    blendMode: 0
+  - name: LipsLowerClose
+    m_blendShapes:
+    - name: LipsLowerClose
+      weight: 1
+    blendMode: 0
+  - name: LipsLowerDown
+    m_blendShapes:
+    - name: LipsLowerDown
+      weight: 1
+    blendMode: 0
+  - name: LipsLowerOpen
+    m_blendShapes:
+    - name: LipsLowerOpen
+      weight: 1
+    blendMode: 0
+  - name: LipsPucker
+    m_blendShapes:
+    - name: LipsPucker
+      weight: 1
+    blendMode: 0
+  - name: LipsStretch_L
+    m_blendShapes:
+    - name: LipsStretch_L
+      weight: 1
+    blendMode: 0
+  - name: LipsStretch_R
+    m_blendShapes:
+    - name: LipsStretch_R
+      weight: 1
+    blendMode: 0
+  - name: LipsUpperClose
+    m_blendShapes:
+    - name: LipsUpperClose
+      weight: 1
+    blendMode: 0
+  - name: LipsUpperOpen
+    m_blendShapes:
+    - name: LipsUpperOpen
+      weight: 1
+    blendMode: 0
+  - name: LipsUpperUp
+    m_blendShapes:
+    - name: LipsUpperUp
+      weight: 1
+    blendMode: 0
+  - name: MouthDimple_L
+    m_blendShapes:
+    - name: MouthDimple_L
+      weight: 1
+    blendMode: 0
+  - name: MouthDimple_R
+    m_blendShapes:
+    - name: MouthDimple_R
+      weight: 1
+    blendMode: 0
+  - name: MouthFrown_L
+    m_blendShapes:
+    - name: MouthFrown_L
+      weight: 1
+    blendMode: 0
+  - name: MouthFrown_R
+    m_blendShapes:
+    - name: MouthFrown_R
+      weight: 1
+    blendMode: 0
+  - name: MouthLeft
+    m_blendShapes:
+    - name: MouthLeft
+      weight: 1
+    blendMode: 0
+  - name: MouthRight
+    m_blendShapes:
+    - name: MouthRight
+      weight: 1
+    blendMode: 0
+  - name: MouthSmile_L
+    m_blendShapes:
+    - name: MouthSmile_L
+      weight: 1
+    blendMode: 0
+  - name: MouthSmile_R
+    m_blendShapes:
+    - name: MouthSmile_R
+      weight: 1
+    blendMode: 0
+  - name: Puff
+    m_blendShapes:
+    - name: Puff
+      weight: 1
+    blendMode: 0
+  - name: Sneer
+    m_blendShapes:
+    - name: Sneer
+      weight: 1
+    blendMode: 0
+  - name: New preset
+    m_blendShapes: []
+    blendMode: 0
+  - name: New preset
+    m_blendShapes: []
+    blendMode: 0

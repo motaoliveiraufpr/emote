@@ -1,0 +1,863 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d0004964225e44a99fbf9a01ad263e, type: 3}
+  m_Name: MBastioni_1.6.1
+  m_EditorClassIdentifier: 
+  m_presets:
+  - name: angry01
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 1
+    - name: Expressions_mouthOpenAggr_min
+      weight: 0.056
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_cheekSneerR_max
+      weight: 1
+    - name: Expressions_browSqueezeR_max
+      weight: 1
+    blendMode: 0
+  - name: crying02
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 1
+    - name: Expressions_mouthOpenAggr_max
+      weight: 0.52
+    - name: Expressions_eyeClosedPressureR_max
+      weight: 1
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_eyeClosedPressureL_max
+      weight: 1
+    - name: Expressions_cheekSneerR_max
+      weight: 1
+    - name: Expressions_mouthSmile_min
+      weight: 0.06
+    - name: Expressions_browSqueezeR_max
+      weight: 1
+    blendMode: 0
+  - name: annoyed01
+    m_blendShapes:
+    - name: Expressions_browSqueezeL_max
+      weight: 0.96000004
+    - name: Expressions_jawHoriz_max
+      weight: 0.120000005
+    - name: Expressions_browOutVertR_max
+      weight: 0.65999997
+    - name: Expressions_eyesVert_max
+      weight: 0.6
+    - name: Expressions_mouthOpenO_max
+      weight: 0.36
+    - name: Expressions_mouthOpen_max
+      weight: 0
+    - name: Expressions_eyesHoriz_max
+      weight: 0.65999997
+    blendMode: 0
+  - name: anxious01
+    m_blendShapes:
+    - name: Expressions_browSqueezeL_max
+      weight: 0.76
+    - name: Expressions_browOutVertR_min
+      weight: 0.024000002
+    - name: Expressions_eyesVert_min
+      weight: 0.054
+    - name: Expressions_eyeClosedL_max
+      weight: 0.29999995
+    - name: Expressions_browOutVertL_min
+      weight: 0.030000001
+    - name: Expressions_browsMidVert_max
+      weight: 0.29999995
+    - name: Expressions_eyesHoriz_min
+      weight: 0.048000004
+    - name: Expressions_eyeClosedR_max
+      weight: 0.29999995
+    - name: Expressions_mouthBite_min
+      weight: 0.1
+    blendMode: 0
+  - name: attentive01
+    m_blendShapes:
+    - name: Expressions_browSqueezeL_max
+      weight: 0.6
+    - name: Expressions_mouthChew_min
+      weight: 0.1
+    - name: Expressions_browSqueezeR_max
+      weight: 0.059999943
+    blendMode: 0
+  - name: bored01
+    m_blendShapes:
+    - name: Expressions_eyeClosedR_min
+      weight: 0.054
+    - name: Expressions_browOutVertR_max
+      weight: 0.72
+    - name: Expressions_eyeClosedL_min
+      weight: 0.072000004
+    - name: Expressions_browOutVertL_max
+      weight: 0.78
+    - name: Expressions_mouthOpenO_min
+      weight: 0.048000004
+    - name: Expressions_mouthOpenLarge_max
+      weight: 0
+    - name: Expressions_browsMidVert_max
+      weight: 0.84000003
+    blendMode: 0
+  - name: breathing_in
+    m_blendShapes:
+    - name: Expressions_chestExpansion_max
+      weight: 1
+    blendMode: 0
+  - name: breathing_out
+    m_blendShapes:
+    - name: Expressions_chestExpansion_min
+      weight: 0.1
+    blendMode: 0
+  - name: confused01
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 0.36
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_eyeSquintL_max
+      weight: 0.17999995
+    - name: Expressions_eyeClosedR_max
+      weight: 0.059999943
+    - name: Expressions_mouthOpenAggr_min
+      weight: 0.036000002
+    - name: Expressions_eyeClosedPressureL_max
+      weight: 0.059999943
+    - name: Expressions_browsMidVert_max
+      weight: 0.24000001
+    - name: Expressions_eyesHoriz_max
+      weight: 0.9
+    - name: Expressions_eyeSquintR_max
+      weight: 0.120000005
+    - name: Expressions_browSqueezeR_max
+      weight: 0.96000004
+    blendMode: 0
+  - name: confused02
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 0.36
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_eyeClosedPressureL_max
+      weight: 0.059999943
+    - name: Expressions_mouthSmileL_max
+      weight: 0.120000005
+    - name: Expressions_mouthClosed_min
+      weight: 0.078
+    - name: Expressions_browsMidVert_max
+      weight: 0.96000004
+    - name: Expressions_eyeSquintL_max
+      weight: 0.17999995
+    - name: Expressions_eyesHoriz_max
+      weight: 0.9
+    - name: Expressions_eyeSquintR_max
+      weight: 0.120000005
+    - name: Expressions_browSqueezeR_max
+      weight: 0.96000004
+    blendMode: 0
+  - name: crying01
+    m_blendShapes:
+    - name: Expressions_eyesHoriz_min
+      weight: 0.042000003
+    - name: Expressions_browOutVertR_min
+      weight: 0.1
+    - name: Expressions_eyeClosedL_max
+      weight: 0.20000005
+    - name: Expressions_eyeClosedPressureL_max
+      weight: 0.41999996
+    - name: Expressions_browOutVertL_min
+      weight: 0.036000002
+    - name: Expressions_eyeSquintL_max
+      weight: 0.120000005
+    - name: Expressions_eyeSquintR_max
+      weight: 0.120000005
+    - name: Expressions_mouthBite_min
+      weight: 0.036000002
+    - name: Expressions_eyeClosedR_max
+      weight: 0.17999995
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_eyeClosedPressureR_max
+      weight: 0.41999996
+    - name: Expressions_mouthOpen_min
+      weight: 0.018000001
+    - name: Expressions_mouthLowerOut_min
+      weight: 0.036000002
+    - name: Expressions_browsMidVert_max
+      weight: 1
+    - name: Expressions_browSqueezeR_max
+      weight: 1
+    blendMode: 0
+  - name: crying02
+    m_blendShapes:
+    - name: Expressions_mouthOpenAggr_max
+      weight: 0.52
+    - name: Expressions_eyeClosedPressureR_max
+      weight: 1
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_eyeClosedPressureL_max
+      weight: 1
+    - name: Expressions_cheekSneerR_max
+      weight: 1
+    - name: Expressions_mouthSmile_min
+      weight: 0.06
+    - name: Expressions_browSqueezeR_max
+      weight: 1
+    blendMode: 0
+  - name: curious01
+    m_blendShapes:
+    - name: Expressions_eyeClosedR_min
+      weight: 0.036000002
+    - name: Expressions_mouthChew_max
+      weight: 0.53999996
+    - name: Expressions_browOutVertR_max
+      weight: 0.65999997
+    - name: Expressions_eyeClosedL_min
+      weight: 0.078
+    - name: Expressions_browsMidVert_max
+      weight: 0.41999996
+    blendMode: 0
+  - name: deglutition01
+    m_blendShapes: []
+    blendMode: 0
+  - name: deglutition02
+    m_blendShapes: []
+    blendMode: 0
+  - name: disgusted
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 0.41999996
+    - name: Expressions_browSqueezeL_max
+      weight: 0.72
+    - name: Expressions_mouthHoriz_max
+      weight: 0.17999995
+    - name: Expressions_browOutVertR_max
+      weight: 0.17999995
+    - name: Expressions_mouthOpenAggr_min
+      weight: 0.096
+    - name: Expressions_eyeSquintL_max
+      weight: 0.29999995
+    blendMode: 0
+  - name: drained01
+    m_blendShapes:
+    - name: Expressions_mouthClosed_min
+      weight: 0.1
+    - name: Expressions_eyeClosedR_max
+      weight: 0.41999996
+    blendMode: 0
+  - name: embarrassed01
+    m_blendShapes:
+    - name: Expressions_eyesVert_min
+      weight: 0.072000004
+    - name: Expressions_eyeClosedL_max
+      weight: 0.36
+    - name: Expressions_browOutVertL_min
+      weight: 0.030000001
+    - name: Expressions_eyesHoriz_min
+      weight: 0.066
+    - name: Expressions_browsMidVert_max
+      weight: 0.72
+    - name: Expressions_mouthBite_max
+      weight: 1
+    blendMode: 0
+  - name: evil01
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 0.17999995
+    - name: Expressions_browOutVertR_max
+      weight: 1
+    - name: Expressions_eyesVert_max
+      weight: 0.120000005
+    - name: Expressions_mouthClosed_max
+      weight: 0.72
+    - name: Expressions_cheekSneerR_max
+      weight: 0.17999995
+    - name: Expressions_browsMidVert_min
+      weight: 0.048000004
+    - name: Expressions_eyeSquintL_max
+      weight: 0.48000002
+    - name: Expressions_eyeSquintR_max
+      weight: 0.120000005
+    blendMode: 0
+  - name: evil02
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 1
+    - name: Expressions_mouthSmileOpen2_max
+      weight: 1
+    - name: Expressions_eyesVert_max
+      weight: 0.48000002
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_cheekSneerR_max
+      weight: 1
+    - name: Expressions_eyesHoriz_max
+      weight: 0
+    - name: Expressions_browSqueezeR_max
+      weight: 1
+    blendMode: 0
+  - name: excited01
+    m_blendShapes:
+    - name: Expressions_browOutVertL_max
+      weight: 1
+    - name: Expressions_mouthSmileOpen_max
+      weight: 1
+    - name: Expressions_browOutVertR_max
+      weight: 0.65999997
+    blendMode: 0
+  - name: eyes_rot_down
+    m_blendShapes: []
+    blendMode: 0
+  - name: eyes_rot_left
+    m_blendShapes: []
+    blendMode: 0
+  - name: eyes_rot_right
+    m_blendShapes: []
+    blendMode: 0
+  - name: eyes_rot_up
+    m_blendShapes: []
+    blendMode: 0
+  - name: flirty01
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 0.29999995
+    - name: Expressions_mouthHoriz_max
+      weight: 0.24000001
+    - name: Expressions_browOutVertR_max
+      weight: 0.78
+    - name: Expressions_eyesVert_max
+      weight: 0.36
+    - name: Expressions_mouthClosed_max
+      weight: 0.72
+    - name: Expressions_browOutVertL_max
+      weight: 0.9
+    - name: Expressions_mouthSmile_max
+      weight: 0.24000001
+    - name: Expressions_browsMidVert_max
+      weight: 0.6
+    blendMode: 0
+  - name: furious01
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 1
+    - name: Expressions_mouthOpenAggr_max
+      weight: 1
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_cheekSneerR_max
+      weight: 1
+    - name: Expressions_browSqueezeR_max
+      weight: 1
+    blendMode: 0
+  - name: furious02
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 1
+    - name: Expressions_mouthOpenAggr_max
+      weight: 1
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_cheekSneerR_max
+      weight: 1
+    - name: Expressions_browSqueezeR_max
+      weight: 1
+    blendMode: 0
+  - name: furious03
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 1
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_mouthOpen_max
+      weight: 1
+    - name: Expressions_cheekSneerR_max
+      weight: 1
+    - name: Expressions_browSqueezeR_max
+      weight: 1
+    blendMode: 0
+  - name: grin01
+    m_blendShapes:
+    - name: Expressions_mouthSmileOpen2_max
+      weight: 1
+    - name: Expressions_eyesVert_min
+      weight: 0.02
+    blendMode: 0
+  - name: happy01
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 0.100000024
+    - name: Expressions_browOutVertR_max
+      weight: 0.41999996
+    - name: Expressions_cheekSneerR_max
+      weight: 0.100000024
+    - name: Expressions_eyeSquintL_max
+      weight: 0.39999998
+    - name: Expressions_mouthSmile_max
+      weight: 1
+    - name: Expressions_eyeSquintR_max
+      weight: 0.39999998
+    blendMode: 0
+  - name: irritated01
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 0.36
+    - name: Expressions_mouthOpenAggr_max
+      weight: 0
+    - name: Expressions_jawHoriz_min
+      weight: 0.024000002
+    - name: Expressions_browSqueezeL_max
+      weight: 0.84000003
+    - name: Expressions_browOutVertL_max
+      weight: 0.24000001
+    - name: Expressions_cheekSneerR_max
+      weight: 0.17999995
+    - name: Expressions_eyeSquintL_max
+      weight: 0.48000002
+    - name: Expressions_mouthSmile_min
+      weight: 0.036000002
+    - name: Expressions_browsMidVert_min
+      weight: 0.042000003
+    - name: Expressions_browSqueezeR_max
+      weight: 1
+    blendMode: 0
+  - name: kiss01
+    m_blendShapes:
+    - name: Expressions_mouthOpenLarge_min
+      weight: 0.1
+    - name: Expressions_eyesVert_min
+      weight: 0.02
+    blendMode: 0
+  - name: lazy01
+    m_blendShapes:
+    - name: Expressions_eyeClosedR_max
+      weight: 0.17999995
+    blendMode: 0
+  - name: offended01
+    m_blendShapes:
+    - name: Expressions_mouthOpenAggr_min
+      weight: 0.042000003
+    - name: Expressions_jawHoriz_max
+      weight: 0.29999995
+    - name: Expressions_eyesVert_max
+      weight: 0.24000001
+    - name: Expressions_mouthClosed_min
+      weight: 0.042000003
+    - name: Expressions_browOutVertL_max
+      weight: 0.29999995
+    blendMode: 0
+  - name: pain01
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 1
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_browOutVertR_min
+      weight: 0.1
+    - name: Expressions_eyeClosedPressureR_max
+      weight: 1
+    - name: Expressions_browOutVertL_min
+      weight: 0.1
+    - name: Expressions_eyeClosedPressureL_max
+      weight: 1
+    - name: Expressions_mouthOpen_min
+      weight: 0.1
+    - name: Expressions_browSqueezeR_max
+      weight: 1
+    - name: Expressions_cheekSneerR_max
+      weight: 1
+    blendMode: 0
+  - name: peaceful01
+    m_blendShapes:
+    - name: Expressions_mouthSmile_max
+      weight: 0.24000001
+    - name: Expressions_eyeClosedR_max
+      weight: 1
+    - name: Expressions_eyeClosedL_max
+      weight: 1
+    blendMode: 0
+  - name: phoneme_a_01
+    m_blendShapes:
+    - name: Expressions_mouthSmileOpen2_max
+      weight: 0.36
+    blendMode: 0
+  - name: phoneme_a_02
+    m_blendShapes:
+    - name: Expressions_mouthClosed_max
+      weight: 0.36
+    - name: Expressions_mouthSmileOpen2_max
+      weight: 0.53999996
+    - name: Expressions_mouthLowerOut_min
+      weight: 0.012000001
+    blendMode: 0
+  - name: phoneme_b_01
+    m_blendShapes:
+    - name: Expressions_mouthLowerOut_min
+      weight: 0.012000001
+    - name: Expressions_mouthOpen_min
+      weight: 0.018000001
+    blendMode: 0
+  - name: phoneme_b_02
+    m_blendShapes:
+    - name: Expressions_mouthOpen_min
+      weight: 0.06
+    blendMode: 0
+  - name: phoneme_c_01
+    m_blendShapes:
+    - name: Expressions_mouthClosed_min
+      weight: 0.048000004
+    - name: Expressions_mouthOpen_max
+      weight: 0
+    - name: Expressions_mouthOpenAggr_min
+      weight: 0.018000001
+    blendMode: 0
+  - name: phoneme_c_02
+    m_blendShapes:
+    - name: Expressions_mouthClosed_min
+      weight: 0.036000002
+    - name: Expressions_mouthOpenLarge_min
+      weight: 0.018000001
+    blendMode: 0
+  - name: phoneme_d_01
+    m_blendShapes:
+    - name: Expressions_mouthClosed_min
+      weight: 0.084
+    blendMode: 0
+  - name: phoneme_e_01
+    m_blendShapes:
+    - name: Expressions_mouthOpenHalf_max
+      weight: 0.120000005
+    - name: Expressions_mouthLowerOut_min
+      weight: 0.012000001
+    - name: Expressions_mouthSmileOpen_max
+      weight: 0.17999995
+    blendMode: 0
+  - name: phoneme_f_01
+    m_blendShapes: []
+    blendMode: 0
+  - name: phoneme_g_01
+    m_blendShapes:
+    - name: Expressions_mouthOpenAggr_max
+      weight: 0
+    blendMode: 0
+  - name: phoneme_i_01
+    m_blendShapes:
+    - name: Expressions_mouthSmileOpen2_max
+      weight: 0.36
+    blendMode: 0
+  - name: phoneme_i_02
+    m_blendShapes:
+    - name: Expressions_mouthClosed_max
+      weight: 0.36
+    - name: Expressions_mouthLowerOut_min
+      weight: 0.012000001
+    - name: Expressions_mouthOpen_max
+      weight: 0.120000005
+    blendMode: 0
+  - name: phoneme_k_01
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 0.120000005
+    - name: Expressions_mouthClosed_min
+      weight: 0.048000004
+    - name: Expressions_mouthOpenAggr_min
+      weight: 0.042000003
+    - name: Expressions_cheekSneerR_max
+      weight: 0.120000005
+    blendMode: 0
+  - name: phoneme_l_01
+    m_blendShapes:
+    - name: Expressions_tongueTipUp_max
+      weight: 0.48000002
+    blendMode: 0
+  - name: phoneme_m_01
+    m_blendShapes:
+    - name: Expressions_mouthClosed_min
+      weight: 0.018000001
+    blendMode: 0
+  - name: phoneme_n_01
+    m_blendShapes:
+    - name: Expressions_tongueTipUp_max
+      weight: 0.059999943
+    - name: Expressions_mouthOpenHalf_max
+      weight: 0.17999995
+    - name: Expressions_mouthSmileOpen_max
+      weight: 0.120000005
+    blendMode: 0
+  - name: phoneme_o_01
+    m_blendShapes:
+    - name: Expressions_mouthClosed_min
+      weight: 0.1
+    blendMode: 0
+  - name: phoneme_o_02
+    m_blendShapes: []
+    blendMode: 0
+  - name: phoneme_p_01
+    m_blendShapes:
+    - name: Expressions_mouthOpen_min
+      weight: 0.078
+    blendMode: 0
+  - name: phoneme_q_01
+    m_blendShapes: []
+    blendMode: 0
+  - name: phoneme_r_01
+    m_blendShapes:
+    - name: Expressions_tongueTipUp_max
+      weight: 0.36
+    blendMode: 0
+  - name: phoneme_r_02
+    m_blendShapes:
+    - name: Expressions_tongueTipUp_max
+      weight: 0.36
+    - name: Expressions_mouthSmileOpen2_max
+      weight: 0.24000001
+    blendMode: 0
+  - name: phoneme_s_01
+    m_blendShapes:
+    - name: Expressions_mouthClosed_min
+      weight: 0.084
+    blendMode: 0
+  - name: phoneme_t_01
+    m_blendShapes:
+    - name: Expressions_mouthClosed_min
+      weight: 0.072000004
+    blendMode: 0
+  - name: phoneme_u_01
+    m_blendShapes:
+    - name: Expressions_mouthClosed_min
+      weight: 0.012000001
+    - name: Expressions_mouthOpenHalf_max
+      weight: 0
+    blendMode: 0
+  - name: phoneme_w_01
+    m_blendShapes: []
+    blendMode: 0
+  - name: posing01
+    m_blendShapes:
+    - name: Expressions_browOutVertR_max
+      weight: 1
+    - name: Expressions_eyesVert_min
+      weight: 0.02
+    - name: Expressions_eyeClosedL_min
+      weight: 0.066
+    - name: Expressions_browOutVertL_max
+      weight: 0.9
+    - name: Expressions_mouthOpenLarge_min
+      weight: 0.054
+    - name: Expressions_browsMidVert_max
+      weight: 1
+    blendMode: 0
+  - name: sad01
+    m_blendShapes:
+    - name: Expressions_eyeSquintL_min
+      weight: 0.024000002
+    - name: Expressions_mouthSmile_min
+      weight: 0.024000002
+    blendMode: 0
+  - name: sad02
+    m_blendShapes:
+    - name: Expressions_mouthSmileOpen2_min
+      weight: 0.0060000005
+    - name: Expressions_mouthSmileOpen_min
+      weight: 0.012000001
+    - name: Expressions_browOutVertR_max
+      weight: 0.39999998
+    - name: Expressions_eyesVert_max
+      weight: 0.20000005
+    - name: Expressions_eyeClosedL_min
+      weight: 0.066
+    - name: Expressions_mouthClosed_max
+      weight: 0.24000001
+    - name: Expressions_browOutVertL_max
+      weight: 0.36
+    - name: Expressions_mouthSmile_min
+      weight: 0.018000001
+    - name: Expressions_browsMidVert_max
+      weight: 1
+    blendMode: 0
+  - name: sarcastic01
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 0.53999996
+    - name: Expressions_browOutVertR_max
+      weight: 1
+    - name: Expressions_mouthClosed_max
+      weight: 1
+    - name: Expressions_browOutVertL_max
+      weight: 0.84000003
+    - name: Expressions_eyeSquintL_max
+      weight: 0.120000005
+    - name: Expressions_mouthSmile_max
+      weight: 0.29999995
+    - name: Expressions_eyeSquintR_max
+      weight: 0.120000005
+    - name: Expressions_mouthSmileL_max
+      weight: 0.72
+    - name: Expressions_eyeClosedR_max
+      weight: 0.059999943
+    - name: Expressions_eyeClosedL_max
+      weight: 0.059999943
+    - name: Expressions_cheekSneerR_max
+      weight: 0.41999996
+    blendMode: 0
+  - name: scared01
+    m_blendShapes:
+    - name: Expressions_cheekSneerL_max
+      weight: 0.36
+    - name: Expressions_mouthOpenAggr_min
+      weight: 0.036000002
+    - name: Expressions_eyeClosedL_min
+      weight: 0.078
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_browsMidVert_max
+      weight: 0.24000001
+    - name: Expressions_eyesHoriz_max
+      weight: 0.9
+    - name: Expressions_eyeClosedR_min
+      weight: 0.096
+    - name: Expressions_browSqueezeR_max
+      weight: 0.96000004
+    blendMode: 0
+  - name: serene01
+    m_blendShapes:
+    - name: Expressions_mouthSmile_max
+      weight: 0.24000001
+    - name: Expressions_eyeClosedR_max
+      weight: 0.03999996
+    - name: Expressions_eyeClosedL_max
+      weight: 0.100000024
+    blendMode: 0
+  - name: shocked01
+    m_blendShapes:
+    - name: Expressions_browSqueezeL_max
+      weight: 1
+    - name: Expressions_eyeClosedL_min
+      weight: 0.06
+    - name: Expressions_mouthOpenAggr_min
+      weight: 0.024000002
+    - name: Expressions_mouthClosed_min
+      weight: 0.1
+    - name: Expressions_eyeClosedR_min
+      weight: 0.1
+    blendMode: 0
+  - name: shy01
+    m_blendShapes:
+    - name: Expressions_mouthOpen_min
+      weight: 0.094000004
+    - name: Expressions_eyesHoriz_min
+      weight: 0.066
+    - name: Expressions_eyeClosedR_max
+      weight: 0.36
+    - name: Expressions_eyeClosedL_max
+      weight: 0.36
+    blendMode: 0
+  - name: sleep01
+    m_blendShapes:
+    - name: Expressions_mouthClosed_min
+      weight: 0.024000002
+    - name: Expressions_eyeClosedR_max
+      weight: 1
+    blendMode: 0
+  - name: surprise01
+    m_blendShapes:
+    - name: Expressions_browOutVertR_max
+      weight: 0.120000005
+    - name: Expressions_eyesVert_min
+      weight: 0.02
+    - name: Expressions_eyeClosedL_min
+      weight: 0.06
+    - name: Expressions_browOutVertL_max
+      weight: 0.17999995
+    - name: Expressions_mouthOpenO_max
+      weight: 0.24000001
+    - name: Expressions_browsMidVert_max
+      weight: 0.72
+    blendMode: 0
+  - name: surprise02
+    m_blendShapes:
+    - name: Expressions_mouthSmileOpen2_max
+      weight: 0.48000002
+    - name: Expressions_browOutVertR_max
+      weight: 0.120000005
+    - name: Expressions_eyesVert_min
+      weight: 0.02
+    - name: Expressions_eyeClosedL_min
+      weight: 0.06
+    - name: Expressions_browOutVertL_max
+      weight: 0.17999995
+    - name: Expressions_browsMidVert_max
+      weight: 0.72
+    blendMode: 0
+  - name: surprise03
+    m_blendShapes:
+    - name: Expressions_browOutVertR_max
+      weight: 0.53999996
+    - name: Expressions_eyeClosedL_min
+      weight: 0.042000003
+    - name: Expressions_browOutVertL_max
+      weight: 0.36
+    - name: Expressions_mouthOpenO_min
+      weight: 0.054
+    - name: Expressions_browsMidVert_max
+      weight: 0.72
+    blendMode: 0
+  - name: tired01
+    m_blendShapes:
+    - name: Expressions_browOutVertL_max
+      weight: 0.17999995
+    - name: Expressions_eyeClosedR_max
+      weight: 0.41999996
+    blendMode: 0
+  - name: very_sad01
+    m_blendShapes:
+    - name: Expressions_mouthSmileOpen2_min
+      weight: 0.0060000005
+    - name: Expressions_mouthSmileOpen_min
+      weight: 0.012000001
+    - name: Expressions_browOutVertR_max
+      weight: 0.39999998
+    - name: Expressions_eyesVert_max
+      weight: 0.20000005
+    - name: Expressions_eyeClosedL_min
+      weight: 0.066
+    - name: Expressions_mouthClosed_max
+      weight: 0.24000001
+    - name: Expressions_browOutVertL_max
+      weight: 0.36
+    - name: Expressions_mouthSmile_min
+      weight: 0.09
+    - name: Expressions_browsMidVert_max
+      weight: 1
+    blendMode: 0
+  - name: wink01
+    m_blendShapes:
+    - name: Expressions_mouthSmileL_max
+      weight: 0.120000005
+    - name: Expressions_eyeClosedPressureR_max
+      weight: 1
+    - name: Expressions_cheekSneerR_max
+      weight: 0.48000002
+    - name: Expressions_mouthSmileR_max
+      weight: 0.72
+    - name: Expressions_eyeSquintL_max
+      weight: 0.29999995
+    - name: Expressions_browsMidVert_min
+      weight: 0.06
+    blendMode: 0
+  - name: phoneme_z_01
+    m_blendShapes:
+    - name: Expressions_mouthClosed_min
+      weight: 0.06
+    - name: Expressions_tongueTipUp_max
+      weight: 0.36
+    blendMode: 0
