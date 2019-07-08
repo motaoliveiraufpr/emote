@@ -33,6 +33,15 @@ namespace Emote.Utils
             }
         }
 
+        public void secureDeviceStop()
+        {
+            if (m_CameraInput && m_WebCamTexture)
+            {
+                m_Detector.StopDetector();
+                m_WebCamTexture.Stop();
+            }
+        }
+
         void Start()
         {
             if (m_Dropdown == null)

@@ -375,7 +375,8 @@ namespace Emote.Utils
                     {
                         if (m_DeviceManager)
                         {
-                            m_DeviceManager.m_Device.Stop();
+                            m_DeviceManager.secureDeviceStop();
+                            // m_DeviceManager.m_Device.Stop();
                         }
 
                         EmoteSession.enableNextKey = false;
@@ -388,7 +389,8 @@ namespace Emote.Utils
                         {
                             if (m_DeviceManager)
                             {
-                                m_DeviceManager.m_Device.Stop();
+                                m_DeviceManager.secureDeviceStop();
+                                // m_DeviceManager.m_Device.Stop();
                             }
 
                             EmoteSession.enableNextKey = false;
