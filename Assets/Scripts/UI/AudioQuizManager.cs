@@ -359,7 +359,8 @@ namespace Emote.Utils
                     {
                         if (m_DeviceManager)
                         {
-                            m_DeviceManager.m_Device.Stop();
+                            m_DeviceManager.secureDeviceStop();
+                            //m_DeviceManager.m_Device.Stop();
                         }
                         EmoteSession.enableNextKey = false;
                         SceneManager.LoadScene(m_NextScene, LoadSceneMode.Single);
