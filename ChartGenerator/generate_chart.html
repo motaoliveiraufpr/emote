@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Emotion - IMAGO</title>
+  <style>
+	  body {
+		  margin: 0;
+	  }
+	  input {
+		  position: absolute;
+		  z-index: 999;
+	  }
+	  .container,
+	  .container canvas {
+		  position: fixed;
+		  overflow: hidden;
+		  width: 100%;
+		  min-height: auto;
+	  }
+  </style>
+</head>
+<body>
+	<input type="file" id="files" name="files[]" multiple />
+
+	<div class="container">
+		<canvas id="chart"></canvas>
+	</div>
+
+	<script src="http://hongru.github.io/proj/canvas2image/canvas2image.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+	<script>
+		const saved = [];
+		const tasks = [];
+
+		function parseCSV(text, lineTerminator, cellTerminator) {
+			var lines = text.split(lineTerminator);
+			var emotions = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
+
+			for (var j = 1; j < lines.length; j++) {
+				var information = lines[j].split(cellTerminator);
+				for (var k = 1; k < 8; k++) {
+					if (lines[j] != "") {
+						var valor = information[k];
+						var valence = information[8];
+
+						if (typeof valor === 'string' && typeof valence === 'string') {
+							valor = valor.replace(",", ".");
+							valor = parseFloat(valor);
+							valence = parseInt(valence);
+
+							if (!isNaN(valor) && !isNaN(valence)) {
+								switch (k) {
+									case 1: //joy
+										emotions[0] += (valor * valence);
+										break;
+									case 2: // fear
+										emotions[1] += (valor * valence);
+										break;
+									case 3: //disgust
+										emotions[2] += (valor * valence);
+										break;
+									case 4: //sadness
+										emotions[3] += (valor * valence);
+										break;
+									case 5: //anger
+										emotions[4] += (valor * valence);
+										break;
+									case 6: //surprise
+										emotions[5] += (valor * valence);
+										break;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			var total = 0.0;
+			for (var i = 0; i < emotions.length; i++) {
+				total += emotions[i];
+			}
+
+			for (var i = 0; i < emotions.length; i++) {
+				emotions[i] /= total;
+				emotions[i] *= 100;
+			}
+
+			return emotions;
+		}
+
+		function dataURItoBlob(dataURI) {
+			// convert base64 to raw binary data held in a string
+			// doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
+			var byteString = atob(dataURI.split(',')[1]);
+
+			// separate out the mime component
+			var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+
+			// write the bytes of the string to an ArrayBuffer
+			var ab = new ArrayBuffer(byteString.length);
+
+			// create a view into the buffer
+			var ia = new Uint8Array(ab);
+
+			// set the bytes of the buffer to the correct values
+			for (var i = 0; i < byteString.length; i++) {
+				ia[i] = byteString.charCodeAt(i);
+			}
+
+			// write the ArrayBuffer to a blob, and you're done
+			var blob = new Blob([ab], {type: mimeString});
+			return blob;
+		}
+
+		function saveToFile(blob, filename) {
+			var a = document.createElement('a');
+    		document.body.appendChild(a);
+    		a.style = 'display: none';
+			var url = window.URL.createObjectURL(blob);
+			a.href = url;
+    		a.download = filename;
+    		a.click();
+    		window.URL.revokeObjectURL(url);
+		}
+
+		function renderIntoImage(chart, theFile) {
+			var b64 = chart.toBase64Image().split(',')[1];
+			var filename = theFile.name.split('.')[0];
+			if (!saved[filename]) {
+				var blob = dataURItoBlob(chart.toBase64Image());
+				saved[filename] = true;
+
+				saveToFile(blob, filename + '.png');
+			}
+		}
+
+		function generateChart(_data, theFile) {
+			// Global Options
+			Chart.defaults.global.defaultFontFamily = 'Lato';
+			Chart.defaults.global.defaultFontsize = 18;
+			Chart.defaults.global.defaultFontColor = '#777';
+
+			var ctx = document.getElementById('chart').getContext('2d');
+			var chart = new Chart(ctx, {
+				type: 'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+				responsive: true,
+				plugins: [{
+					afterRender: function () {
+						// Do anything you want
+						renderIntoImage(chart, theFile);
+					},
+				}],
+				data: {
+					labels: ['Joy', 'Fear', 'Sadness', 'Disgust', 'Anger', 'Surprise'],
+					datasets: [{
+						label: 'Emotion',
+						data: [
+							_data[0],
+							_data[1],
+							_data[2],
+							_data[3],
+							_data[4],
+							_data[5]
+						],
+						backgroundColor: [
+							'red',
+							'black',
+							'yellow',
+							'blue',
+							'green',
+							'#ffa726'
+						],
+						borderWidth: 1,
+						borderColor: 'white',
+						hoverBorderWidth: 3,
+						hoverBorderColor: 'grey'
+					}]
+				},
+				options: {
+					title: {
+						display: true,
+						text: 'Emotion Recognition',
+						fontSize: 25
+					},
+					legend: {
+						display: true,
+						position: 'right',
+						labels: {
+							fontColor: '#000'
+						}
+					},
+					layout: {
+						padding: {
+							left: 50,
+							right: 0,
+							bottom: 0,
+							top: 0
+						}
+					},
+					tooltips: {
+						enabled: true
+					}
+				}
+			});
+
+			return chart;
+		}
+
+		function handleFileSelect(evt) {
+			var files = evt.target.files; // FileList object
+			// Loop through the FileList and populate the 'outputTable' with the data
+			for (var i = 0, f; f = files[i]; i++) {
+				var reader = new FileReader();
+				const file = f;
+				// Closure to capture the file information.
+				reader.onload = function(e) {
+
+					const trigger = function() {
+						const theFile = file;
+						const event = e;
+
+						var result = parseCSV(event.target.result, '\n', ';');
+						var chart = generateChart(result, theFile);
+
+						return chart;
+					}
+
+					tasks.push(trigger);
+				}
+				// Read the file as text
+				reader.readAsText(f);
+			}
+
+			waitForElementToDisplay(tasks, 1000);
+		}
+
+		function waitForElementToDisplay(array, time) {
+        	if(array.length > 0) {
+				for(var i=0; i < tasks.length; i++) {
+					var chart = tasks[i]();
+					chart.clear();
+				}
+
+            	return;
+        	}
+        	else {
+            	setTimeout(function() {
+                	waitForElementToDisplay(array, time);
+            	}, time);
+        	}
+    	}
+		document.getElementById('files').addEventListener('change', handleFileSelect, false);
+	</script>
+
+</body>
+</html>
