@@ -236,58 +236,64 @@ namespace Emote.Utils
 
         void EmotionsQuizHandler()
         {
-            if (m_AudioPlayer.isPlaying)
+            try
             {
-                m_AudioPlayer.Stop();
-            }
-
-            SetCurrentAudio(m_AudioList[QuizState.index]);
-
-            if (m_NextButton)
-            {
-                // disable next button
-                m_NextButton.enabled = false;
-            }
-
-            // generate array of answers
-            QuizState.answer = (Emotions)m_AudioList[QuizState.index].emotion;
-            QuizState.options = new Emotions[7];
-            QuizState.options[6] = (Emotions)m_AudioList[QuizState.index].emotion;
-
-            QuizState.used.Clear();
-            QuizState.used.Add(QuizState.answer);
-            if (EmoteSession.randomOptions)
-            {
-                for (int i = 0; i < 7; i++)
+                if (m_AudioPlayer.isPlaying)
                 {
-                    Emotions temp = AvatarEmotions.GetRandomEmotion();
-                    while (QuizState.used.Contains(temp))
+                    m_AudioPlayer.Stop();
+                }
+
+                SetCurrentAudio(m_AudioList[QuizState.index]);
+
+                if (m_NextButton)
+                {
+                    // disable next button
+                    m_NextButton.enabled = false;
+                }
+
+                // generate array of answers
+                QuizState.answer = (Emotions)m_AudioList[QuizState.index].emotion;
+                QuizState.options = new Emotions[7];
+                QuizState.options[6] = (Emotions)m_AudioList[QuizState.index].emotion;
+
+                QuizState.used.Clear();
+                QuizState.used.Add(QuizState.answer);
+                if (EmoteSession.randomOptions)
+                {
+                    for (int i = 0; i < 7; i++)
                     {
-                        temp = AvatarEmotions.GetRandomEmotion();
+                        Emotions temp = AvatarEmotions.GetRandomEmotion();
+                        while (QuizState.used.Contains(temp))
+                        {
+                            temp = AvatarEmotions.GetRandomEmotion();
+                        }
+                        QuizState.used.Add(temp);
+                        QuizState.options[i] = temp;
                     }
-                    QuizState.used.Add(temp);
-                    QuizState.options[i] = temp;
+                    AvatarQuizManager.Shuffle(QuizState.options);
                 }
-                AvatarQuizManager.Shuffle(QuizState.options);
-            }
-            else
-            {
-                Emotions[] temp = AvatarEmotions.GetStaticEmotions();
-                for (int i = 0; i < 7; i++)
+                else
                 {
-                    QuizState.options[i] = temp[i];
+                    Emotions[] temp = AvatarEmotions.GetStaticEmotions();
+                    for (int i = 0; i < 7; i++)
+                    {
+                        QuizState.options[i] = temp[i];
+                    }
                 }
-            }
 
-            // set answer options
-            if (OptionManager)
+                // set answer options
+                if (OptionManager)
+                {
+                    OptionManager.ClearToggles();
+                    OptionManager.AddToggle(QuizState.options);
+                }
+
+                // increment index
+                //QuizState.index++;
+            } catch (System.IndexOutOfRangeException e)
             {
-                OptionManager.ClearToggles();
-                OptionManager.AddToggle(QuizState.options);
+                nextStep();
             }
-
-            // increment index
-            QuizState.index++;
         }
 
 
@@ -346,6 +352,8 @@ namespace Emote.Utils
                         DatabaseManager.m_Answers = answer;
                     }
                     EmoteSession.enableNextKey = false;
+                    QuizState.index++;
+
                     EmotionsQuizHandler();
                 }
             }
@@ -353,23 +361,28 @@ namespace Emote.Utils
             {
                 if (EmoteSession.enableNextKey && !m_AudioPlayer.isPlaying)
                 {
-                    m_Duration.StoreData();
-                    m_NextButton.enabled = false;
-                    if (!string.IsNullOrEmpty(m_NextScene))
-                    {
-                        if (m_DeviceManager)
-                        {
-                            m_DeviceManager.secureDeviceStop();
-                            //m_DeviceManager.m_Device.Stop();
-                        }
-                        EmoteSession.enableNextKey = false;
-                        SceneManager.LoadScene(m_NextScene, LoadSceneMode.Single);
-                    }
-                    else
-                    {
-                        Application.Quit();
-                    }
+                    nextStep();
                 }
+            }
+        }
+
+        private void nextStep()
+        {
+            m_Duration.StoreData();
+            m_NextButton.enabled = false;
+            if (!string.IsNullOrEmpty(m_NextScene))
+            {
+                if (m_DeviceManager)
+                {
+                    m_DeviceManager.secureDeviceStop();
+                    //m_DeviceManager.m_Device.Stop();
+                }
+                EmoteSession.enableNextKey = false;
+                SceneManager.LoadScene(m_NextScene, LoadSceneMode.Single);
+            }
+            else
+            {
+                Application.Quit();
             }
         }
 #endregion
