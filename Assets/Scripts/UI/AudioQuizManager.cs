@@ -290,8 +290,9 @@ namespace Emote.Utils
 
                 // increment index
                 //QuizState.index++;
-            } catch (System.IndexOutOfRangeException e)
+            } catch (System.Exception e)
             {
+                Debug.Log(e.Message);
                 nextStep();
             }
         }
