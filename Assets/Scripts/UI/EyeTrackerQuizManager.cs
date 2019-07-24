@@ -340,62 +340,70 @@ namespace Emote.Utils
 
         void ResourceQuizHandler()
         {
-            if (m_TrackerListener) m_TrackerListener.m_StoreThePresence = true;
-
-            if (m_VideoPlayer) m_VideoPlayer.Stop();
-            if (m_QuizCanvas) m_QuizCanvas.enabled = false;
-
-            m_VideoQuad.SetActive(false);
-            m_ImageQuad.SetActive(false);
-
-            SetCurrentResource(m_ResourceList[QuizState.index]);
-
-            if (m_NextButton)
+            try
             {
-                // disable next button
-                m_NextButton.enabled = false;
-            }
+                if (m_TrackerListener) m_TrackerListener.m_StoreThePresence = true;
 
-            // generate array of answers
-            QuizState.answer = (Emotions)m_ResourceList[QuizState.index].emotion;
-            QuizState.options = new Emotions[7];
-            QuizState.options[6] = (Emotions)m_ResourceList[QuizState.index].emotion;
+                if (m_VideoPlayer) m_VideoPlayer.Stop();
+                if (m_QuizCanvas) m_QuizCanvas.enabled = false;
 
-            QuizState.used.Clear();
-            QuizState.used.Add(QuizState.answer);
-            if (EmoteSession.randomOptions)
-            {
-                for (int i = 0; i < 7; i++)
+                m_VideoQuad.SetActive(false);
+                m_ImageQuad.SetActive(false);
+
+                SetCurrentResource(m_ResourceList[QuizState.index]);
+
+                if (m_NextButton)
                 {
-                    Emotions temp = AvatarEmotions.GetRandomEmotion();
-                    while (QuizState.used.Contains(temp))
+                    // disable next button
+                    m_NextButton.enabled = false;
+                }
+
+                // generate array of answers
+                QuizState.answer = (Emotions)m_ResourceList[QuizState.index].emotion;
+                QuizState.options = new Emotions[7];
+                QuizState.options[6] = (Emotions)m_ResourceList[QuizState.index].emotion;
+
+                QuizState.used.Clear();
+                QuizState.used.Add(QuizState.answer);
+                if (EmoteSession.randomOptions)
+                {
+                    for (int i = 0; i < 7; i++)
                     {
-                        temp = AvatarEmotions.GetRandomEmotion();
+                        Emotions temp = AvatarEmotions.GetRandomEmotion();
+                        while (QuizState.used.Contains(temp))
+                        {
+                            temp = AvatarEmotions.GetRandomEmotion();
+                        }
+                        QuizState.used.Add(temp);
+                        QuizState.options[i] = temp;
                     }
-                    QuizState.used.Add(temp);
-                    QuizState.options[i] = temp;
+                    AvatarQuizManager.Shuffle(QuizState.options);
                 }
-                AvatarQuizManager.Shuffle(QuizState.options);
-            }
-            else
-            {
-                Emotions[] temp = AvatarEmotions.GetStaticEmotions();
-                Debug.Log(temp);
-                for (int i = 0; i < 7; i++)
+                else
                 {
-                    QuizState.options[i] = temp[i];
+                    Emotions[] temp = AvatarEmotions.GetStaticEmotions();
+                    Debug.Log(temp);
+                    for (int i = 0; i < 7; i++)
+                    {
+                        QuizState.options[i] = temp[i];
+                    }
                 }
-            }
 
-            // set answer options
-            if (OptionManager)
+                // set answer options
+                if (OptionManager)
+                {
+                    OptionManager.ClearToggles();
+                    OptionManager.AddToggle(QuizState.options);
+                }
+
+                // increment index
+                //QuizState.index++;
+            }
+            catch (System.Exception e)
             {
-                OptionManager.ClearToggles();
-                OptionManager.AddToggle(QuizState.options);
+                Debug.Log(e.Message);
+                nextStep();
             }
-
-            // increment index
-            QuizState.index++;
         }
 
         void TakeScreenImage(string file = "default")
@@ -460,6 +468,7 @@ namespace Emote.Utils
                             }
                         }
                         EmoteSession.enableNextKey = false;
+                        QuizState.index++;
                         ResourceQuizHandler();
                     }
                 }
@@ -468,36 +477,41 @@ namespace Emote.Utils
             {
                 if (EmoteSession.enableNextKey)
                 {
-                    if ((m_ResourceType == ResourceType.IMAGE && m_QuizCanvas.enabled == true) || (m_ResourceType == ResourceType.VIDEO && !m_VideoPlayer.isPlaying))
-                    {
-                        m_NextButton.enabled = false;
-                        m_Duration.StoreData();
-                        m_TrackerListener.SaveGazeData();
-                        if (EmoteSession.trainingMode)
-                        {
-                            EmoteSession.enableNextKey = false;
-                            SceneManager.LoadScene("ModeScene", LoadSceneMode.Single);
-                        }
-                        else
-                        {
-                            // stop session timer count
-                            EmoteSession.time.Stop();
-                            if (!EmoteSession.trainingMode)
-                            {
-                                EmoteSession.session.time = EmoteSession.current_time;
-                                DatabaseManager.m_Session = EmoteSession.session;
-                            }
+                    nextStep();
+                }
+            }
+        }
 
-                            if (!string.IsNullOrEmpty(m_NextScene))
-                            {
-                                EmoteSession.enableNextKey = false;
-                                SceneManager.LoadScene(m_NextScene, LoadSceneMode.Single);
-                            }
-                            else
-                            {
-                                Application.Quit();
-                            }
-                        }
+        private void nextStep()
+        {
+            if ((m_ResourceType == ResourceType.IMAGE && m_QuizCanvas.enabled == true) || (m_ResourceType == ResourceType.VIDEO && !m_VideoPlayer.isPlaying))
+            {
+                m_NextButton.enabled = false;
+                m_Duration.StoreData();
+                m_TrackerListener.SaveGazeData();
+                if (EmoteSession.trainingMode)
+                {
+                    EmoteSession.enableNextKey = false;
+                    SceneManager.LoadScene("ModeScene", LoadSceneMode.Single);
+                }
+                else
+                {
+                    // stop session timer count
+                    EmoteSession.time.Stop();
+                    if (!EmoteSession.trainingMode)
+                    {
+                        EmoteSession.session.time = EmoteSession.current_time;
+                        DatabaseManager.m_Session = EmoteSession.session;
+                    }
+
+                    if (!string.IsNullOrEmpty(m_NextScene))
+                    {
+                        EmoteSession.enableNextKey = false;
+                        SceneManager.LoadScene(m_NextScene, LoadSceneMode.Single);
+                    }
+                    else
+                    {
+                        Application.Quit();
                     }
                 }
             }
