@@ -484,11 +484,12 @@ namespace Emote.Utils
 
         private void nextStep()
         {
-            if ((m_ResourceType == ResourceType.IMAGE && m_QuizCanvas.enabled == true) || (m_ResourceType == ResourceType.VIDEO && !m_VideoPlayer.isPlaying))
+            if ((m_ResourceType == ResourceType.IMAGE && m_QuizCanvas.enabled == true) || (m_ResourceType == ResourceType.VIDEO && !m_VideoPlayer.isPlaying) || m_QuizCanvas.enabled == false)
             {
                 m_NextButton.enabled = false;
                 m_Duration.StoreData();
                 m_TrackerListener.SaveGazeData();
+
                 if (EmoteSession.trainingMode)
                 {
                     EmoteSession.enableNextKey = false;
