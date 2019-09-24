@@ -1,4 +1,6 @@
-﻿// Unity derives Video File Input Component UI from this file
+﻿#pragma warning disable 0618
+
+// Unity derives Video File Input Component UI from this file
 using UnityEngine;
 using System.Collections;
 

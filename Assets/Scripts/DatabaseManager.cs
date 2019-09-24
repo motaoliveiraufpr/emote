@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿#pragma warning disable 0168 // variable declared but not used.
+#pragma warning disable 0219 // variable assigned but not used.
+#pragma warning disable 0414 // private field assigned but not used.
+
+using UnityEngine;
 using Mono.Data.Sqlite;
 using System.Data;
 using System;
@@ -1518,7 +1522,14 @@ namespace Emote.Database
                     tempData = new string[_internal_Reader.FieldCount];
                     for (int i = 0; i < _internal_Reader.FieldCount; i++)
                     {
-                        tempData[i] = _internal_Reader.GetValue(i).ToString();
+                        // fix bug of datetime conversion
+                        try
+                        {
+                            tempData[i] = _internal_Reader.GetValue(i).ToString();
+                        }catch(Exception e)
+                        {
+                            tempData[i] = "";
+                        }
                     }
                     rowData.Add(tempData);
 

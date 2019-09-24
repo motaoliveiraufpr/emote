@@ -1,4 +1,9 @@
-﻿using System.IO;
+﻿#pragma warning disable 0168 // variable declared but not used.
+#pragma warning disable 0219 // variable assigned but not used.
+#pragma warning disable 0414 // private field assigned but not used.
+#pragma warning disable 0162
+
+using System.IO;
 using System.Collections.Generic;
 using UnityEngine.Video;
 using UnityEngine;

@@ -1,4 +1,5 @@
-﻿#pragma warning disable CS0414
+﻿#pragma warning disable 1692
+#pragma warning disable 0414
 
 using System;
 using System.Collections;
