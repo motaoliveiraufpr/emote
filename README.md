@@ -1,3 +1,4 @@
+```markdown
 ---
 
 # BACRE-I_Emotion_Gaze_Mapping
@@ -47,7 +48,6 @@ The Emotion Gaze Mapping module produces:
 
 ## 📁 Access to Full Module Resources
 
-You can access additional materials (documentation, figures, experimental outputs and videos) here:
+Additional materials (documentation, figures, experimental outputs and videos):
 
-👉 [BACRE-I Emotion Gaze Mapping Resources](https://drive.google.com/drive/folders/1OYfumcsPjnzUJOme-HqGnWTM-SX3VQrj)
-
+👉 https://drive.google.com/drive/folders/1OYfumcsPjnzUJOme-HqGnWTM-SX3VQrj
