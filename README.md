@@ -5,129 +5,114 @@
 ---
 
 <p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0002.jpg" width="100%">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0002.jpg" width="100%">
 </p>
 
 ---
 
-## The Problem
-
-Traditional emotion recognition tests rely on static photos and subjective scoring.  
-Real social life is dynamic, multimodal, and cognitively demanding.
+## Emotion is the Language of Social Life
 
 <p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0003.jpg" width="100%">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0003.jpg" width="100%">
 </p>
 
 ---
 
-## The Solution — BACRE-I
-
-A unified multimodal computerized battery integrating:
-
-- Static Images  
-- Dynamic Videos  
-- Vocal Stimuli  
-- Audiovisual Clips  
-- Avatar-Based Stimuli  
-- Eye Tracking  
+## Real Life Isn't Static
 
 <p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0005.jpg" width="100%">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0004.jpg" width="100%">
 </p>
 
 ---
 
-## Assessment Architecture
+## Introducing BACRE-I
 
 <p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0006.jpg" width="100%">
-</p>
-
-<p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0007.jpg" width="100%">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0005.jpg" width="100%">
 </p>
 
 ---
 
-## Self-Referential Avatar System
+## Assessment Journey
 
 <p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0008.jpg" width="100%">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0006.jpg" width="100%">
 </p>
 
-Participants interact with a digital twin generated from their own photo, increasing ecological validity and engagement.
+<p align="center">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0007.jpg" width="100%">
+</p>
 
 ---
 
-## Objective Gaze Mapping
+## Avatar-Based System
 
 <p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0009.jpg" width="100%">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0008.jpg" width="100%">
 </p>
-
-Infrared-based eye tracking measures visual attention beyond right/wrong scoring.
 
 ---
 
-## Empirical Validation
+## Mapping the Gaze
 
 <p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0010.jpg" width="100%">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0009.jpg" width="100%">
 </p>
-
-- N = 82 schoolchildren (8–12 years)  
-- Preterm vs Term-born comparison  
-- Public school context  
 
 ---
 
-## Key Findings
+## Study Sample
 
 <p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0011.jpg" width="100%">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0010.jpg" width="100%">
 </p>
 
-Dynamic and multimodal tasks are harder —  
-but better approximate real-world emotional decoding.
+---
+
+## Performance & Complexity
+
+<p align="center">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0011.jpg" width="100%">
+</p>
 
 ---
 
 ## Visual Attention Patterns
 
 <p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0012.jpg" width="100%">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0012.jpg" width="100%">
 </p>
-
-Primary fixation on eyes and forehead across conditions.
 
 ---
 
 ## Ecological Validity
 
 <p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0013.jpg" width="100%">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0013.jpg" width="100%">
 </p>
-
-Harder tasks provide more realistic assessment.
 
 ---
 
-## Future Directions
+## Key Takeaways
 
 <p align="center">
-  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_pages-to-jpg-0015.jpg" width="100%">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0014.jpg" width="100%">
 </p>
-
-- Clinical expansion (ASD)  
-- Longitudinal studies  
-- Executive function integration  
 
 ---
 
-## Demonstration & Interface
+## The Path Forward
 
-System screens (Desktop & Mobile) and full demonstration video:
+<p align="center">
+  <img src="assets/storyboard/BACRE-I_Emotion_Gaze_Mapping_page-0015.jpg" width="100%">
+</p>
+
+---
+
+## Demonstration & System Interface
+
+Desktop & Mobile Screens + Full Video:
 
 🔗 https://drive.google.com/drive/folders/1OYfumcsPjnzUJOme-HqGnWTM-SX3VQrj?usp=sharing
 
@@ -138,8 +123,7 @@ System screens (Desktop & Mobile) and full demonstration video:
 Tiago Mota de Oliveira
 Claudemir Casa
 
----
-
 Federal University of Paraná (UFPR)  
 LabNeuro – Neuropsychology Laboratory  
 CAPES
+
